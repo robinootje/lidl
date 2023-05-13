@@ -1,3 +1,99 @@
-h1 {
-    color: hotpink;
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    align-items: center;
+    background-color: #000;
+    color: white;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 10px 60px;
+}
+
+ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin-left: auto;
+}
+
+a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#logo {
+    height: 60px;
+}
+
+#logo1 {
+    height: 100px;
+}
+
+.full {
+    background-color: #000;
+    background-image: url("./img/1.JPG");
+    display: flex;
+    flex: 1;
+    padding: 60px 120px;
+}
+
+.banner {
+    background-color: #000000d3;
+    color: white;
+    display: grid;
+    font-size: 32px;
+    height: min-content;
+    line-height: 25px;
+    padding: 30px 30px 30px 60px;
+    text-shadow: 2px 2px 8px #444240;
+    width: 30vw;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#lidl {
+    font-size: 80px;
+}
+
+.interaction {
+    align-items: center;
+    background: white;
+    color: black;
+    display: flex;
+    padding: 10px 20px;
+    place-self: end;
+    text-shadow: none;   
+    width: 150px;
+}
+
+.interaction:hover {
+    background: #ccc;
+}
+
+#arrow {
+    padding-left: 10px;
 }
