@@ -3,11 +3,11 @@ let countdownElement = document.getElementById("countdown");
 let answerElements = document.getElementsByClassName('answer');
 
 //Alle vragen
-let questionsArray = ["What is this?","What is that?", "Who is you?","Where is me?","Something wrong?","wat vind je het lekkerst?","waarom niet?"];
+let questionsArray = ["What is this?","What is that?","Wie is je beste vriend?","Who is you?","Where is me?","Something wrong?","Wat vind je het lekkerst?","Waarom niet?"];
 //Alle correcte antwoorden, als er geen antwoord is dan zet je "" neer. Dit moet omdat de antwoorden anders niet meer kloppen met de vraag.
-let answerArray = ["*A Quiz", "*Something","*A Person", "*Home", "*Nope","","*Daarom"];
+let answerArray = ["*A Quiz","*Something","","*A Person", "*Home", "*Nope","","*Daarom"];
 //Alle foute antwoorden (2 per vraag), als er geen antwoord is dan zet je [] neer. dit moet omdat de antwoorden anders niet meer kloppen met de vraag.
-let wrongAnswers = [["Breakfast","Potato"],["Nothing","Everything"],["A Dog","A Cat"],["Outside","Away"],["Yes","Always"],[],["Daarom niet","Gewoon"]];
+let wrongAnswers = [["Breakfast","Potato"],["Nothing","Everything"],[],["A Dog","A Cat"],["Outside","Away"],["Yes","Always"],[],["Daarom niet","Gewoon"]];
 
 // lege let voor de antwoorden
 let currentAnswers = [];
@@ -16,12 +16,12 @@ let currentAnswers = [];
 let index = -1;
 let maxIndex = questionsArray.length-1;
 
-// "timer" heeft nu een waarde van 5000 wat 5000 ms betekent, oftewel 5 seconden.
-// Mocht je dit willen aanpassen naar 10 seconden dan kan je 5000 naar 10000 veranderen.
-// Deze timer is alleen voor de eerste keer dat het inlaad. Je hebt dan nu 5 seconden voordat de eerste vraag wordt laten zien.
+// "timer" heeft nu een waarde van 3000 wat 3000 ms betekent, oftewel 3 seconden.
+// Mocht je dit willen aanpassen naar 10 seconden dan kan je 3000 naar 10000 veranderen.
+// Deze timer is alleen voor de eerste keer dat het inlaad. Je hebt dan nu 3 seconden voordat de eerste vraag wordt laten zien.
 let timer = setTimeout(setNextQuestion, 3000);
 // Synchroniseer dit nummer met de timer hierboven
-let counter = 5;
+let counter = 3;
 // Zet de timer op de pagina
 countdownElement.innerHTML = counter;
 // Zet de eerste vraag op de pagina
