@@ -11,7 +11,7 @@ body {
 
 .container {
     align-items: center;
-    background-image: url(../img/image.gif);
+    background-image: url(../img/image.jpeg);
     border: #B51E8F 40px solid;
     display: flex;
     flex: 1;

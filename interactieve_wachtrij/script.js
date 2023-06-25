@@ -41,18 +41,19 @@ function setCountdown() {
 
 
 function setNextQuestion() {
-    // Als er nog vragen zijn, laat dan de volgende vraag zien na 5 seconden en zet de timer weer aan.
+    // Als er nog vragen zijn, laat dan de volgende vraag zien na 15 seconden en zet de timer weer aan.
     if (index !== maxIndex) {
         clearInterval(interval);
         clearTimeout(timer);
         index++;
         questionElement.innerHTML = questionsArray[index];
         setAnswers();
-        counter = 5;
+        // Syncroniseer dit nummer met de timer hieronder
+        counter = 15;
         countdownElement.innerHTML = counter;
-        // "timer" heeft nu een waarde van 5000 wat 5000 ms betekent, oftewel 5 seconden.
-        // Mocht je dit willen aanpassen naar 10 seconden dan kan je 5000 naar 10000 veranderen.
-        timer = setTimeout(setNextQuestion,5000);
+        // "timer" heeft nu een waarde van 15000 wat 15000 ms betekent, oftewel 15 seconden.
+        // Mocht je dit willen aanpassen naar 10 seconden dan kan je 15000 naar 10000 veranderen.
+        timer = setTimeout(setNextQuestion,15000);
         interval = setInterval(setCountdown, 1000);
     } else {
         // Als er geen vragen meer zijn, laat dan een alert zien en refresh de pagina.
