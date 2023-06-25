@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(249, 249, 249);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.questions {
+    /* width: 100%; */
+}
+
+.answers {
+    display: inline-flex;
+    gap:50px;
+}
+
+#question {
+    
+}
+
+.answer {
+    border: 1px solid;
+    border-radius: 3px;
+    background-color: lightgray;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.correct-answer { background-color: rgb(89, 236, 89) !important }
+.incorrect-answer { background-color: rgb(255, 61, 61) !important }
+
+.answer-1 { background-color: rgb(255, 61, 61) }
+.answer-2 { background-color: rgb(253, 253, 82) }
+.answer-3 { background-color: rgb(61, 61, 253)}

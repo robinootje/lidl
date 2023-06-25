@@ -1,23 +1,25 @@
 <?php
 
+// PHP array met enkel korte vragen. Deze vragen bevatten geen antwoorden
 $korte_vragen = [
-    // "Vraag" => "Antwoord",
-    "Wie heeft deze website gemaakt?" => "Jurgen Visser",
-    "Van wie is de opdracht?" => "Robin Stevens"
+    // "Vraag",
+    "Wat is jou vaforiete kleur?",
+    "Van wie krijg jij het meeste inspiratie om verder te gaan?"
 ];
 
+// multidimentiale PHP array met meerkeuze vragen en hun bijbehordende antwoorden en welk antwoord goed is
 $meerkeuzevragen = [
     "Wat is geen primaire kleur?" => [
-        "Rood",
-        "Geel",
-        "Groen",]
-        "Blauw"
+        "Rood" => false,
+        "Geel" => false,
+        "Groen" => true,
+        "Blauw" => false
     ],
     "Wat is geen klinker?" => [
-        "A",
-        "E",
-        "Y",
-        "O"
+        "A" => false,
+        "E" => false,
+        "Y" => true,
+        "O" => false
     ]
 ];
 
@@ -36,10 +38,9 @@ $meerkeuzevragen = [
     <h2>De korte vragen zijn</h2>
     
 <?php
-    foreach ($korte_vragen as $question => $answer) {
+    foreach ($korte_vragen as $question) {
 ?>
         <h3><?=$question?></h3>
-        <button><?=$answer?></button>
 <?php
     }
 ?>
@@ -51,9 +52,10 @@ $meerkeuzevragen = [
 ?>
         <h3><?=$vraag?></h3>
 <?php
-        foreach ($antwoorden as $antwoord) {
+        foreach ($antwoorden as $antwoord => $correct) {
 ?>
-        <button><?=$antwoord?></button>
+        <button><?=$antwoord?><?= $correct == true ? ' - 1' : ' - 0'; ?></button>
+        
 <?php
         }
     }
